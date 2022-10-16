@@ -35,8 +35,7 @@ def saveToFile(text:str, file_path:str):
 	with open(file_path, 'wb') as f:
 		f.write(response.content)
 		f.close()
-
-	print(f"save to {file_path}")
+	#print(f"save to {file_path}")
 
 def play_sound(text:str):
 	file_to_save = "test.mp3"

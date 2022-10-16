@@ -15,3 +15,6 @@ https://cloud.google.com/text-to-speech/docs/basics
 https://aws.amazon.com/polly/
 
 https://rapidapi.com/voicerss/api/text-to-speech-1/details
+
+
+![alt text](https://github.com/distareza/PythonGUI_TextToSpeech/raw/master/Screenshot20221017073426.png)
