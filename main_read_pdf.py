@@ -21,10 +21,12 @@ def select_file():
     thread_init.start()
 
 
+labelStatus = tkinter.Label(font=("Courier", 12))
 frameInput = tkinter.Frame(borderwidth=20)
-inputText = tkinter.Text(frameInput, width=140, height=40, font=("Courier", 9))
+inputText = tkinter.Text(frameInput, width=140, height=30, font=("Courier", 9))
 open_button = tkinter.Button(text="Open File", command=select_file)
 
+labelStatus.pack()
 frameInput.pack()
 inputText.pack()
 open_button.pack()
@@ -33,8 +35,10 @@ def readPDF(filename):
     with open(filename, "rb") as filehandle:
         pdf = PdfFileReader(filehandle)
         info = pdf.getDocumentInfo()
-        print(info)
         pages = pdf.getNumPages()
+        print(info)
+
+        labelStatus.config(text=f"File Name : {filename}\nTotal Page : {pages}")
 
         for page in range(pages):
             print(f"Read Page {page}")
